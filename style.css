@@ -1,0 +1,188 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: var(--stone-100);
+    font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    color: var(--stone-900);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .container {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 740px;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  h1 {
+    font-family: 'Young Serif', serif;
+    font-size: 2.5rem;
+    color: var(--brown-800);
+    margin-bottom: 1rem;
+  }
+
+  .header p {
+    color: var(--stone-600);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+
+  .pre-time {
+    background-color: var(--rose-50);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+
+  .pre-time p {
+    color: var(--rose-800);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .pre-time ul {
+    list-style: inside disc;
+    padding-left: 1rem;
+    color: var(--stone-600);
+  }
+
+  .pre-time li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  section h2 {
+    font-family: 'Young Serif', serif;
+    font-size: 2rem;
+    color: var(--brown-800);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  ul {
+    list-style: inside disc;
+    padding-left: 1rem;
+    color: var(--stone-600);
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  
+  ol {
+    counter-reset: step-counter;
+    padding-left: 0;
+    list-style: none;
+    color: var(--stone-600);
+  }
+
+  ol li {
+    counter-increment: step-counter;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 2.5rem;
+  }
+
+  ol li::before {
+    content: counter(step-counter) ".";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: 700;
+    color: var(--brown-800);
+    font-family: 'Outfit', sans-serif;
+  }
+
+  ol li b {
+    color: var(--stone-900);
+    font-weight: 600;
+  }
+
+  hr {
+    margin: 2rem 0;
+    border: 1px solid var(--stone-150);
+  }
+  .nutrition {
+    border-radius: 1rem;
+  }
+  
+  .nutrition h2 {
+    font-family: 'Young Serif', serif;
+    font-size: 2rem;
+    color: var(--brown-800);
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .recipe-note {
+    color: hsl(30, 10%, 34%);
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .nutrition-table {
+    width: 100%;
+    border-collapse: collapse; 
+  }
+  
+  .nutrition-table tr {
+    border-bottom: 1px solid hsl(30, 10%, 34%)
+  }
+  
+  .nutrition-table th,
+  .nutrition-table td {
+    text-align: left;
+    padding: 0.75rem 0; /* Satırlar arası boşluk */
+    font-size: 1rem;
+  }
+  
+  .nutrition-table th {
+    color: hsl(30, 10%, 34%);
+    font-weight: normal;
+  }
+  
+  .nutrition-table td {
+    color: hsl(14, 45%, 36%);
+    font-weight: bold;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+    }
+  }
